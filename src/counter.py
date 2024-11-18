@@ -14,3 +14,9 @@ class Counter:
 
     def reset(self):
         self.value = self._initial_value
+        
+    def set_value(self, new_value):
+        if isinstance(new_value, int):
+            self.value = new_value
+        else:
+            raise ValueError("Provided value must be an integer")
